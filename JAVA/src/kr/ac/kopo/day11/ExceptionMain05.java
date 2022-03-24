@@ -16,8 +16,8 @@ public class ExceptionMain05 {
 		String str = "hello";
 		System.out.println("str : " + str);
 		System.out.println(str.charAt(10));
-		} catch(ArithmeticException | StringIndexOutOfBoundsException ae) {
-			System.out.println("예외처리 : " + ae.getMessage());
+		} catch(Exception e) {
+			System.out.println("예외처리 : " + e.getMessage());
 //			ae.printStackTrace();
 		}/*catch(StringIndexOutOfBoundsException se) {
 			System.out.println("StringIndexOutOfBoundsException : " 

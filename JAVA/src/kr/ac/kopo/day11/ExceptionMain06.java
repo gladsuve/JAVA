@@ -1,6 +1,7 @@
 package kr.ac.kopo.day11;
 
-import java.util.Random;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 
 public class ExceptionMain06 {
 	
@@ -8,23 +9,11 @@ public class ExceptionMain06 {
 		
 		System.out.println("main start...");
 		try {
-		Random r = new Random();
-		int num = r.nextInt(3); // 0, 1, 2
-		System.out.println("num : " + num);
-		System.out.println(10 / num);
-		
-		String str = "hello";
-		System.out.println("str : " + str);
-		System.out.println(str.charAt(10));
-		} catch(ArithmeticException | StringIndexOutOfBoundsException ae) {
-			System.out.println("예외처리 : " + ae.getMessage());
-//			ae.printStackTrace();
-		}/*catch(StringIndexOutOfBoundsException se) {
-			System.out.println("StringIndexOutOfBoundsException : " 
-		+ se.getMessage());
+		FileReader fr = new FileReader("a.txt"); //checked Exception
+		} catch(FileNotFoundException fnfe) {
+			fnfe.printStackTrace();
 		}
-		*/
-			System.out.println("main end...");
+		System.out.println("main end...");
 	}
 
 }
